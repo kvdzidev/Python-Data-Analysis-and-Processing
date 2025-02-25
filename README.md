@@ -1,59 +1,26 @@
 # Python-Data-Analysis-and-Processing
-Project: Collection of Scripts for Data Analysis and Processing
-Description
-This repository contains three Python scripts implementing various algorithms and functions for data analysis, visualization, and machine learning.
+# 🧠 AI & Machine Learning Demonstrations
 
-Files
-1. astar_test.py - A* Pathfinding Algorithm Implementation
-This script implements the A* algorithm to find the shortest path between two points on a map. The user can select one of three heuristics:
+## 📌 Overview
+This repository contains three Python scripts showcasing **recent advancements in NLP (Natural Language Processing) and CV (Computer Vision)**, along with **an understanding of ML/DL (Machine Learning/Deep Learning) algorithms**.  
+It covers:
+- **NLP:** Sentiment analysis using a Transformer model.
+- **CV:** Image classification using a pre-trained deep learning model.
+- **ML/DL:** Training an autoencoder on the MNIST dataset.
 
-Manhattan Metric
-Euclidean Metric
-Random Metric
-The script loads a map image, identifies the start and goal points, and then draws the computed path on the map.
+---
 
-Use Cases:
+## 📂 Files & Features
 
-Grid-based navigation
-AI and game pathfinding algorithms
-Route optimization
-2. test_function_plot.py - Mathematical Function Visualization
-This script generates 3D plots for various optimization functions, such as:
+### 1️⃣ **NLP - Sentiment Analysis (`sentiment_analysis.py`)**  
+📌 **Description:**  
+- Uses **Hugging Face's Transformers** (`distilbert-base-uncased`) to analyze sentiment (positive/negative).  
+- Processes sample text inputs and classifies their sentiment.
 
-Sphere
-Rosenbrock
-Beale
-Matyas
-Rastrigin
-Easom
-It can be executed with a command-line argument specifying the function name.
+📌 **Example Usage:**
+```python
+from transformers import pipeline
 
-Example Usage:
+nlp_pipeline = pipeline("sentiment-analysis")
+print(nlp_pipeline("I love machine learning!")) 
 
-bash
-Kopiuj
-Edytuj
-python test_function_plot.py sphere
-The script creates a 3D surface visualization of the selected function in the range (-5, 5) for both variables.
-
-Use Cases:
-
-Visualization of optimization function landscapes
-Analysis and comparison of test functions
-3. autoenkoder_mnist.py - Autoencoder for MNIST Image Compression
-This script implements an autoencoder neural network to reconstruct images from the MNIST dataset. It consists of two parts:
-
-Encoder: compresses images into a lower-dimensional representation
-Decoder: reconstructs the image from the encoded version
-The model is trained for 10 epochs and then generates examples of original and reconstructed images.
-
-Use Cases:
-
-Image compression and reconstruction
-Preprocessing data for deep learning
-Noise reduction in images
-Requirements
-To run the scripts, install the required libraries:
-pip install numpy matplotlib torch torchvision pillow
-Author
-Repository created by: kvdzidev
